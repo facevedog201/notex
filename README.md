@@ -1,4 +1,4 @@
-# 📝 NoteX — Notes Web App (Google Cloud Platform Deployment)
+# 📝 NoteX — Notes Web App
 
 NoteX es una aplicación web full-stack para gestionar notas simples.  
 El proyecto fue desarrollado como parte de un trabajo final 
@@ -65,23 +65,3 @@ notex/
 │ └── notex-architecture.png
 │
 └── README.md
-
-
----
-
-# ⚙️ Backend — API REST
-
-### ▶️ Endpoints
-
-| Método | Ruta         | Descripción            |
-|--------|--------------|------------------------|
-| GET    | `/notes`     | Lista todas las notas |
-| POST   | `/notes`     | Crea una nueva nota   |
-
-Ejemplo de payload:
-
-```json
-{
-  "title": "Mi primera nota",
-  "description": "Hola NoteX!"
-}
