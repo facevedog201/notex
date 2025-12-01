@@ -13,28 +13,17 @@ usando servicios serverless y una arquitectura moderna basada en contenedores.
 - ⚙️ Backend en **Node.js + Express (API REST)**
 - 🗄️ Base de datos **Cloud SQL (PostgreSQL)**
 - ☁️ Despliegue serverless en **Cloud Run**
-- 🛠️ CI/CD con **Cloud Build**
-- 📦 Contenedores almacenados en **Artifact Registry**
-- 🗃️ Código desplegado automáticamente con `gcloud builds submit`
-
----
-
-## 🏗️ Arquitectura del Proyecto
-
----
 
 ## 🧰 Tecnologías utilizadas
 
 ### Frontend
 - React 18
 - react-scripts
-- Axios (para requests)
 
 ### Backend
 - Node.js 18
 - Express.js
 - pg (módulo PostgreSQL)
-- CORS
 
 ### Google Cloud Platform
 - Cloud Run (Frontend + Backend)
