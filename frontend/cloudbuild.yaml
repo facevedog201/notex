@@ -1,0 +1,23 @@
+steps:
+  # Build
+  - name: gcr.io/cloud-builders/docker
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/notex-frontend:latest", "."]
+
+  # Push
+  - name: gcr.io/cloud-builders/docker
+    args: ["push", "gcr.io/$PROJECT_ID/notex-frontend:latest"]
+
+  # Deploy to Cloud Run
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: gcloud
+    args:
+      - run
+      - deploy
+      - notex-frontend
+      - --image=gcr.io/$PROJECT_ID/notex-frontend:latest
+      - --region=us-central1
+      - --platform=managed
+      - --allow-unauthenticated
+
+images:
+  - gcr.io/$PROJECT_ID/notex-frontend:latest
